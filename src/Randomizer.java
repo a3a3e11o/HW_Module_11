@@ -7,7 +7,7 @@ public class Randomizer {
         public static void main(String[] args) {
             long a = 25214903917L;
             long c = 11L;
-            long m = 2^48;
+            long m = (long) Math.pow(2,48);
             long seed = 30L;
 
             Stream<Long> randomStream = generator(a, c, m, seed);

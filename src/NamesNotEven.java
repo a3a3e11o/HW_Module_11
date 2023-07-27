@@ -7,8 +7,8 @@ public class NamesNotEven {
         List<String> names = List.of("Ivan", "John", "Peter", "Alex", "Vova");
 
         String result = IntStream.range(0, names.size())
-                .filter(i -> i % 2 == 0)
-                .mapToObj(i -> (i + 1) + ". " + names.get(i))
+                .filter(i -> i % 2 != 0)
+                .mapToObj(i -> i + ". " + names.get(i))
                 .collect(Collectors.joining(", "));
 
         System.out.println(result);
